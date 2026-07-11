@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nebula OS</title>
+    <title>Premium 3D Futuristic Loader & Login</title>
     <link rel="stylesheet" href="css/boot.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <!-- Ambient background particle container -->
     <div class="particle-container" id="particleContainer"></div>
 
-    <!-- Main 3D Loader Wrapper (Id add kiya hai takki JS se hide kar sakein) -->
+    <!-- Main 3D Loader Wrapper -->
     <div class="loader-container" id="loaderWrapper">
         <div class="scene-3d">
             <div class="glass-ring"></div>
@@ -31,13 +31,47 @@
     </div>
 
     <!-- ==========================================================================
-       AAPKA MAIN PAGE CONTENT (Shuruat mein hidden rahega)
+       PREMIUM FUTURISTIC LOGIN INTERFACE (Revealed post-load)
        ========================================================================== -->
     <main id="mainContent" class="main-content">
-        <div class="content-card">
-            <h1>Welcome to the Future</h1>
-            <p>System initialized successfully. All premium core elements are online and running at 60 FPS.</p>
-            <button class="btn-dashboard">Enter Dashboard</button>
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Access Portal</h2>
+                <p>Secure encryption protocol active</p>
+            </div>
+            
+            <form id="loginForm" autocomplete="off">
+                <!-- Username Input Wrapper -->
+                <div class="input-group">
+                    <input type="text" id="username" required placeholder=" ">
+                    <label for="username">Identity Key / Username</label>
+                    <div class="input-glow-line"></div>
+                </div>
+
+                <!-- Password Input Wrapper -->
+                <div class="input-group">
+                    <input type="password" id="password" required placeholder=" ">
+                    <label for="password">Security Password</label>
+                    <div class="input-glow-line"></div>
+                </div>
+
+                <!-- Remember & Forgot Options -->
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        <span class="custom-checkbox"></span>
+                        Remember Terminal
+                    </label>
+                    <a href="#" class="forgot-pass">Recover Key?</a>
+                </div>
+
+                <!-- Core Trigger Action Button -->
+                <button type="submit" class="btn-login">Authenticate</button>
+            </form>
+
+            <div class="login-footer">
+                <p>New operative? <a href="#">Request clearance</a></p>
+            </div>
         </div>
     </main>
 
