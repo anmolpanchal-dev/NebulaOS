@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula OS</title>
+    <link rel="stylesheet" href="css/boot.css">
+</head>
+<body>
+
+    <!-- Ambient background particle container -->
+    <div class="particle-container" id="particleContainer"></div>
+
+    <!-- Main 3D Loader Wrapper (Id add kiya hai takki JS se hide kar sakein) -->
+    <div class="loader-container" id="loaderWrapper">
+        <div class="scene-3d">
+            <div class="glass-ring"></div>
+            <div class="sphere-cage">
+                <div class="ring ring-x"></div>
+                <div class="ring ring-y"></div>
+                <div class="ring ring-z"></div>
+            </div>
+            <div class="core-energy"></div>
+            <div class="orbiting-node node-1"></div>
+            <div class="orbiting-node node-2"></div>
+        </div>
+        <div class="loading-text">
+            <span>INITIALIZING SYSTEM</span>
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       AAPKA MAIN PAGE CONTENT (Shuruat mein hidden rahega)
+       ========================================================================== -->
+    <main id="mainContent" class="main-content">
+        <div class="content-card">
+            <h1>Welcome to the Future</h1>
+            <p>System initialized successfully. All premium core elements are online and running at 60 FPS.</p>
+            <button class="btn-dashboard">Enter Dashboard</button>
+        </div>
+    </main>
+
+    <script src="js/boot.js"></script>
+</body>
+</html>
