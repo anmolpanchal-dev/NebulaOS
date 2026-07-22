@@ -3,78 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium 3D Futuristic Loader & Login</title>
-    <link rel="stylesheet" href="css/boot.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/taskbar.css">
+    <link rel="stylesheet" href="css/rightClick.css">
 </head>
 <body>
+    <div id="app"></div>
 
-    <!-- Ambient background particle container -->
-    <div class="particle-container" id="particleContainer"></div>
-
-    <!-- Main 3D Loader Wrapper -->
-    <div class="loader-container" id="loaderWrapper">
-        <div class="scene-3d">
-            <div class="glass-ring"></div>
-            <div class="sphere-cage">
-                <div class="ring ring-x"></div>
-                <div class="ring ring-y"></div>
-                <div class="ring ring-z"></div>
-            </div>
-            <div class="core-energy"></div>
-            <div class="orbiting-node node-1"></div>
-            <div class="orbiting-node node-2"></div>
-        </div>
-        <div class="loading-text">
-            <span>INITIALIZING SYSTEM</span>
-            <div class="progress-bar"></div>
-        </div>
-    </div>
-
-    <!-- ==========================================================================
-       PREMIUM FUTURISTIC LOGIN INTERFACE (Revealed post-load)
-       ========================================================================== -->
-    <main id="mainContent" class="main-content">
-        <div class="login-card">
-            <div class="login-header">
-                <h2>Access Portal</h2>
-                <p>Secure encryption protocol active</p>
-            </div>
-            
-            <form id="loginForm" autocomplete="off">
-                <!-- Username Input Wrapper -->
-                <div class="input-group">
-                    <input type="text" id="username" required placeholder=" ">
-                    <label for="username">Identity Key / Username</label>
-                    <div class="input-glow-line"></div>
-                </div>
-
-                <!-- Password Input Wrapper -->
-                <div class="input-group">
-                    <input type="password" id="password" required placeholder=" ">
-                    <label for="password">Security Password</label>
-                    <div class="input-glow-line"></div>
-                </div>
-
-                <!-- Remember & Forgot Options -->
-                <div class="form-options">
-                    <label class="remember-me">
-                        <input type="checkbox">
-                        <span class="custom-checkbox"></span>
-                        Remember Terminal
-                    </label>
-                    <a href="#" class="forgot-pass">Recover Key?</a>
-                </div>
-
-                <!-- Core Trigger Action Button -->
-                <button type="submit" class="btn-login">Authenticate</button>
-            </form>
-
-            <div class="login-footer">
-                <p>New operative? <a href="#">Request clearance</a></p>
-            </div>
-        </div>
-    </main>
-
-    <script src="js/boot.js"></script>
+    <script src="js/taskbar.js"></script>
+    <script src="js/rightClick.js"></script>
 </body>
 </html>

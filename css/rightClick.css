@@ -1,0 +1,22 @@
+.menu{
+    position: fixed;
+    display: none;
+
+    width: 160px;
+    background: #2d2d2d;
+    color: white;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+.item{
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.item:hover{
+    background: #444;
+}
