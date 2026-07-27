@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>NovaOS</title>
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/taskbar.css">
     <link rel="stylesheet" href="css/rightClick.css">
+    <link rel="stylesheet" href="css/window.css">
 </head>
-<body>
-    <div id="app"></div>
 
+<body>
+
+    <div id="app">
+        <div id="desktop"></div>
+
+        <div id="taskbar">
+            <button id="startBtn">⊞</button>
+
+            <div id="taskbarApps"></div>
+
+            <div id="systemTray">
+                <span>📶</span>
+                <span>🔊</span>
+                <span>🔋</span>
+                <span id="clock">00:00</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/windowManager.js"></script>
     <script src="js/taskbar.js"></script>
     <script src="js/rightClick.js"></script>
+
 </body>
 </html>

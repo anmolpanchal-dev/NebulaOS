@@ -1,17 +1,72 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
-#app{
-    min-height: 100vh;
 
-    background-image: url("../assets/philip-oroni-NBQH9hYvCwY-unsplash\ \(3\).jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+    background: #111;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#desktop {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #283593, transparent 30%),
+        radial-gradient(circle at 80% 70%, #512da8, transparent 30%),
+        linear-gradient(135deg, #050505, #101525);
+
+    position: relative;
+}
+
+/* Desktop Icons */
+
+.desktop-icon {
+    width: 80px;
+    height: 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    color: white;
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    user-select: none;
+}
+
+.desktop-icon:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.icon-image {
+    font-size: 40px;
+}
+
+.icon-name {
+    font-size: 13px;
+    text-align: center;
+
+    text-shadow: 0 1px 3px black;
 }
