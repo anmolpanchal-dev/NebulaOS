@@ -1,93 +1,167 @@
+/* =========================
+   TASKBAR
+========================= */
+
 #taskbar {
-    position: absolute;
+    position: fixed;
 
     left: 0;
+    right: 0;
     bottom: 0;
 
-    width: 100%;
-    height: 55px;
+    height: 60px;
 
-    background: rgba(15, 15, 20, 0.85);
-
-    backdrop-filter: blur(15px);
-
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
 
-    padding: 0 10px;
+    padding: 0 12px;
 
-    z-index: 1000;
+    background: rgba(15, 15, 20, 0.96);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 999999;
 }
 
-/* Start Button */
+
+/* =========================
+   START BUTTON
+========================= */
 
 #startBtn {
-    width: 42px;
-    height: 42px;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
 
     border: none;
     border-radius: 8px;
 
     background: transparent;
+
     color: white;
 
     font-size: 28px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
 }
 
+
 #startBtn:hover {
+
     background: rgba(255, 255, 255, 0.12);
+
 }
 
-/* Taskbar Apps */
+
+/* =========================
+   APPS CONTAINER
+========================= */
 
 #taskbarApps {
+
     display: flex;
     align-items: center;
 
-    gap: 5px;
+    gap: 6px;
 
-    margin-left: 10px;
+    margin-left: 12px;
+
+    /* IMPORTANT */
+
+    flex: 0 1 auto;
+
+    min-width: 0;
+
+    overflow: hidden;
 }
 
-/* System Tray */
 
-#systemTray {
+/* =========================
+   APP BUTTON
+========================= */
+
+.taskbar-app {
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.taskbar-app:hover {
+
+    background: rgba(255, 255, 255, 0.12);
+
+}
+
+
+/* =========================
+   SYSTEM AREA
+========================= */
+
+#system-area {
+
     margin-left: auto;
+
+    flex: 0 0 auto;
 
     height: 100%;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    gap: 14px;
+    padding: 0 10px;
+
+    box-sizing: border-box;
 
     color: white;
-    font-size: 13px;
 }
+
+
+/* =========================
+   CLOCK
+========================= */
 
 #clock {
-    min-width: 45px;
+
+    display: block;
+
+    width: 60px;
+
     text-align: center;
-}
 
-.taskbar-app {
-    width: 42px;
-    height: 42px;
+    color: white;
 
-    border: none;
-    border-radius: 8px;
+    font-size: 14px;
 
-    background: transparent;
+    line-height: 1;
 
-    font-size: 22px;
-
-    cursor: pointer;
-}
-
-.taskbar-app:hover {
-    background: rgba(255, 255, 255, 0.12);
+    white-space: nowrap;
 }

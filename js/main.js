@@ -1,0 +1,7 @@
+createDesktop();
+
+createTaskbar();
+
+createStartMenu();
+
+createContextMenu();

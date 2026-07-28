@@ -1,60 +1,70 @@
-const desktop = document.querySelector("#desktop");
-const taskbarApps = document.querySelector("#taskbarApps");
-const clock = document.querySelector("#clock");
+let taskbarApps;
+let clock;
+let startBtn;
 
 
-const apps = [
-    {
-        name: "Files",
-        icon: "📁"
-    },
+/* =========================
+   CREATE TASKBAR
+========================= */
 
-    {
-        name: "Notes",
-        icon: "📝"
-    },
+function createTaskbar(){
 
-    {
-        name: "Terminal",
-        icon: "💻"
-    },
+    const taskbar = document.createElement("div");
 
-    {
-        name: "Browser",
-        icon: "🌐"
-    },
+    taskbar.id = "taskbar";
 
-    {
-        name: "Settings",
-        icon: "⚙️"
-    }
-];
 
-function createDesktopIcon(app) {
+    taskbar.innerHTML = `
 
-    const icon = document.createElement("div");
+        <button id="startBtn">
+            ⊞
+        </button>
 
-    icon.classList.add("desktop-icon");
 
-    icon.innerHTML = `
-        <div class="icon-image">${app.icon}</div>
-        <div class="icon-name">${app.name}</div>
+        <div id="taskbarApps"></div>
+
+
+        <div id="system-area">
+
+            <span id="clock">
+                00:00
+            </span>
+
+        </div>
+
     `;
 
-    desktop.appendChild(icon);
+
+    app.appendChild(taskbar);
 
 
-    icon.addEventListener("dblclick", () => {
+    taskbarApps =
+        document.querySelector("#taskbarApps");
 
-        createWindow(app);
+
+    clock =
+        document.querySelector("#clock");
+
+
+    startBtn =
+        document.querySelector("#startBtn");
+
+
+    startBtn.addEventListener("click", () => {
+
+        toggleStartMenu();
 
     });
 
-
-    return icon;
 }
 
-function createTaskbarIcon(app) {
+
+/* =========================
+   CREATE TASKBAR APP
+========================= */
+function createTaskbarIcon(app){
+
+    console.log("Creating:", app.name);
 
     const button = document.createElement("button");
 
@@ -62,34 +72,71 @@ function createTaskbarIcon(app) {
 
     button.textContent = app.icon;
 
-    taskbarApps.append(button);
+    button.title = app.name;
+
+    button.addEventListener("click", () => {
+
+        createWindow(app);
+
+    });
+
+    taskbarApps.appendChild(button);
+
 }
 
 
-apps.forEach(app => {
+/* =========================
+   CLOCK
+========================= */
 
-    createDesktopIcon(app);
+function updateClock(){
+
+    if(!clock) return;
+
+
+    const now =
+        new Date();
+
+
+    const time =
+        now.toLocaleTimeString(
+            [],
+            {
+                hour: "2-digit",
+                minute: "2-digit"
+            }
+        );
+
+
+    clock.textContent = time;
+
+}
+
+
+function startClock(){
+
+    updateClock();
+
+
+    setInterval(() => {
+
+        updateClock();
+
+    }, 1000);
+
+}
+
+
+/* =========================
+   INITIALIZE
+========================= */
+
+createTaskbar();
+
+startClock();
+
+apps.forEach(app => {
 
     createTaskbarIcon(app);
 
 });
-
-
-
-function updateClock() {
-
-    const now = new Date();
-
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-
-    hours = hours.toString().padStart(2, "0");
-    minutes = minutes.toString().padStart(2, "0");
-
-    clock.textContent = `${hours}:${minutes}`;
-}
-
-
-updateClock();
-
-setInterval(updateClock, 1000);

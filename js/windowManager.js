@@ -1,5 +1,3 @@
-const desktop2 = document.querySelector("#desktop");
-
 let highestZIndex = 10;
 
 
@@ -42,8 +40,7 @@ function createWindow(app) {
 
         <div class="window-content"></div>
     `;
-
-
+    const desktop2 = document.querySelector("#desktop");
     desktop2.append(windowElement);
 
     const content =

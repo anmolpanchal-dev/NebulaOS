@@ -1,0 +1,82 @@
+#desktop {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1e3a8a
+    );
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+/* Desktop Icons */
+
+.desktop-icon{
+
+    width:90px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:8px;
+
+
+    color:white;
+
+    cursor:pointer;
+
+    user-select:none;
+
+
+    border-radius:12px;
+
+    padding:10px;
+
+
+    transition:.2s;
+
+}
+
+
+
+.desktop-icon:hover{
+
+    background:
+    rgba(255,255,255,0.15);
+
+}
+
+
+
+.icon-image{
+
+    font-size:45px;
+
+}
+
+
+
+.icon-name{
+
+    font-size:14px;
+
+    text-align:center;
+
+}

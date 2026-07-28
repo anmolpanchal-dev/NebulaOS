@@ -1,0 +1,78 @@
+#start-menu{
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+
+    width: 320px;
+    height: 420px;
+
+    background: rgba(30,30,30,.95);
+    backdrop-filter: blur(20px);
+
+    border-radius: 12px;
+
+    display: none;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+
+    z-index:9999;
+}
+
+#start-menu.show{
+    display:flex;
+}
+
+.start-header{
+    padding:15px;
+}
+
+#start-search{
+
+    width:100%;
+
+    padding:10px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:8px;
+
+    background:#2d2d2d;
+
+    color:white;
+}
+
+#start-apps{
+
+    flex:1;
+
+    overflow:auto;
+
+}
+
+.start-item{
+
+    padding:12px 15px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.2s;
+
+}
+
+.start-item:hover{
+
+    background:#3b82f6;
+
+}
