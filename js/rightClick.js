@@ -39,7 +39,7 @@ const menu = createContextMenu();
 
 document.addEventListener("contextmenu", function (e) {
 
-    // e.preventDefault();
+    e.preventDefault();
 
     menu.style.display = "block";
 

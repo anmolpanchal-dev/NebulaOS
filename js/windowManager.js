@@ -40,19 +40,33 @@ function createWindow(app) {
 
         </div>
 
-        <div class="window-content">
-
-            <h2>${app.icon} ${app.name}</h2>
-
-            <p style="margin-top: 15px;">
-                Welcome to ${app.name}
-            </p>
-
-        </div>
+        <div class="window-content"></div>
     `;
 
 
     desktop2.append(windowElement);
+
+    const content =
+    windowElement.querySelector(".window-content");
+
+
+if (app.name === "Files") {
+
+    content.appendChild(
+        createFileManager()
+    );
+
+} else {
+
+    content.innerHTML = `
+        <h2>${app.icon} ${app.name}</h2>
+
+        <p style="margin-top: 15px;">
+            Welcome to ${app.name}
+        </p>
+    `;
+
+}
 
 
     /* Bring window to front */
@@ -164,3 +178,8 @@ function makeDraggable(windowElement) {
     });
 
 }
+
+// createWindow({
+//     name: "Test",
+//     icon: "🧪"
+// });

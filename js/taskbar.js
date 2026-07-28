@@ -41,7 +41,7 @@ function createDesktopIcon(app) {
         <div class="icon-name">${app.name}</div>
     `;
 
-    desktop.append(icon);
+    desktop.appendChild(icon);
 
 
     icon.addEventListener("dblclick", () => {
@@ -53,7 +53,6 @@ function createDesktopIcon(app) {
 
     return icon;
 }
-
 
 function createTaskbarIcon(app) {
 
